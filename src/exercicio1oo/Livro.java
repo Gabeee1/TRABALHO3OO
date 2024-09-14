@@ -1,4 +1,6 @@
-package exericicio6oo;
+package exercicio1oo;
+
+import exericicio6oo.c;
 
 public class Livro {
     public String titulo;
@@ -29,7 +31,7 @@ public class Livro {
     }
 
     public static void main(String[] args) {
-        Livro livro = new Livro("LIVRO SUPER LEGAl", "Autor Desconhecido");
+        c livro = new c("LIVRO SUPER LEGAl", "Autor Desconhecido");
         System.out.println("Disponível: " + livro.verificarDisponibilidade());
 
         livro.emprestar();
@@ -39,5 +41,4 @@ public class Livro {
         System.out.println("Disponível após devolução: " + livro.verificarDisponibilidade());
     }
 }
-
 

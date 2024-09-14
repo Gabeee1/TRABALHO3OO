@@ -1,10 +1,12 @@
-package exercicio4oo;
+package exercicio1oo;
 
-public class ContaBancaria {
+import exercicio1oo.ContaBanco;
+
+public class ContaBanco {
     public String numeroConta;
     public float saldo;
 
-    public ContaBancaria(String numeroConta) {
+    public ContaBanco(String numeroConta) {
         this.numeroConta = numeroConta;
         this.saldo = 0;
     }
@@ -27,7 +29,7 @@ public class ContaBancaria {
     }
 
     public static void main(String[] args) {
-        ContaBancaria conta = new ContaBancaria("12345-6");
+        ContaBanco conta = new ContaBanco("12345-6");
         conta.depositar(100);
         conta.sacar(30);
 
