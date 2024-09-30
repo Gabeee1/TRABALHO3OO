@@ -1,6 +1,6 @@
 package exercicio1oo;
 
-
+//GABRIEL E HENRIQUE
 
 public class Aluno {
     public String nome;
@@ -8,15 +8,20 @@ public class Aluno {
     public double n1, n2, n3, n4;
 
     public double calcularMedia() {
-        double media = (n1 + n2 + n3 + n4) / 4;
-        return media;
+        return (n1 + n2 + n3 + n4) / 4;
     }
 
     public void imprimirSituacao() {
-
-
+        double media = calcularMedia();
+        if (media >= 6) {
+            System.out.println(nome + " está Aprovado com média " + media);
+        } else {
+            System.out.println(nome + " está Reprovado com média " + media);
+        }
     }
 }
+
+
 
 
 

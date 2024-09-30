@@ -1,4 +1,6 @@
-package exercicio1oo;
+package exercicio2oo;
+
+
 
 public class testaLivro {
     public static void main(String[] args) {
@@ -6,14 +8,10 @@ public class testaLivro {
 
         System.out.println("O livro está disponível? " + livro.isDisponivel());
 
-        livro.emprestar();
+        livro.emprestar();  // Emprestando o livro
         System.out.println("O livro está disponível? " + livro.isDisponivel());
 
-        livro.emprestar();
-
-        livro.devolver();
+        livro.devolver();  // Devolvendo o livro
         System.out.println("O livro está disponível? " + livro.isDisponivel());
-
-        livro.devolver();
     }
 }

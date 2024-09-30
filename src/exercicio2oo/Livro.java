@@ -1,19 +1,19 @@
-package exercicio1oo;
-
+package exercicio2oo;
+//GABRIEL E HENRIQUE
 public class Livro {
     private String titulo;
     private String autor;
     private int anoPublicacao;
     private boolean disponivel;
 
+    public Livro(String
 
-    public Livro(String titulo, String autor, int anoPublicacao) {
+                         titulo, String autor, int anoPublicacao) {
         this.titulo = titulo;
         this.autor = autor;
         this.anoPublicacao = anoPublicacao;
-        this.disponivel = true; // O livro começa disponível por padrão
+        this.disponivel = true;  // O livro começa disponível por padrão
     }
-
 
     public void emprestar() {
         if (disponivel) {
@@ -33,20 +33,36 @@ public class Livro {
         }
     }
 
-    public boolean isDisponivel() {
-        return disponivel;
-    }
-
+    // Getters e Setters
     public String getTitulo() {
         return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
     public String getAutor() {
         return autor;
     }
 
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
     public int getAnoPublicacao() {
         return anoPublicacao;
     }
-}
 
+    public void setAnoPublicacao(int anoPublicacao) {
+        this.anoPublicacao = anoPublicacao;
+    }
+
+    public boolean isDisponivel() {
+        return disponivel;
+    }
+
+    public void setDisponivel(boolean disponivel) {
+        this.disponivel = disponivel;
+    }
+}
