@@ -5,8 +5,9 @@ package exercicio3oo;
 public class Circulo {
     private double raio;
 
+    // Construtor
     public Circulo(double raio) {
-        this.raio = raio;
+        setRaio(raio);
     }
 
     public double calcularDiametro() {
@@ -27,7 +28,12 @@ public class Circulo {
     }
 
     public void setRaio(double raio) {
-        this.raio = raio;
+        if (raio >= 0) {
+            this.raio = raio;
+        } else {
+            System.out.println("O raio não pode ser negativo.");
+        }
     }
 }
+
 

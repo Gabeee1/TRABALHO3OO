@@ -12,20 +12,20 @@ public class Carro {
         this.marca = marca;
         this.modelo = modelo;
         this.ano = ano;
-        this.velocidadeAtual = 0.0; // Velocidade inicial é 0 km/h
+        this.velocidadeAtual = 0.0;
     }
 
     public void acelerar() {
-        velocidadeAtual += 10;
+        setVelocidadeAtual(velocidadeAtual + 10);
         System.out.println("O carro acelerou. Velocidade atual: " + velocidadeAtual + " km/h");
     }
 
     public void frear() {
         if (velocidadeAtual >= 10) {
-            velocidadeAtual -= 10;
+            setVelocidadeAtual(velocidadeAtual - 10);
             System.out.println("O carro freou. Velocidade atual: " + velocidadeAtual + " km/h");
         } else {
-            velocidadeAtual = 0;
+            setVelocidadeAtual(0);
             System.out.println("O carro parou. Velocidade atual: " + velocidadeAtual + " km/h");
         }
     }
@@ -58,6 +58,16 @@ public class Carro {
     public double getVelocidadeAtual() {
         return velocidadeAtual;
     }
+
+    public void setVelocidadeAtual(double velocidadeAtual) {
+        if (velocidadeAtual >= 0) {
+            this.velocidadeAtual = velocidadeAtual;
+        } else {
+            System.out.println("A velocidade não pode ser negativa.");
+        }
+    }
 }
+
+
 
 

@@ -7,13 +7,17 @@ public class Retangulo {
         return largura * altura;
     }
 
-    // Getters e Setters
+
     public int getLargura() {
         return largura;
     }
 
     public void setLargura(int largura) {
-        this.largura = largura;
+        if (largura >= 0) {
+            this.largura = largura;
+        } else {
+            System.out.println("A largura não pode ser negativa. Valor não alterado.");
+        }
     }
 
     public int getAltura() {
@@ -21,7 +25,13 @@ public class Retangulo {
     }
 
     public void setAltura(int altura) {
-        this.altura = altura;
+        if (altura >= 0) {
+            this.altura = altura;
+        } else {
+            System.out.println("A altura não pode ser negativa. Valor não alterado.");
+        }
     }
 }
+
+
 
