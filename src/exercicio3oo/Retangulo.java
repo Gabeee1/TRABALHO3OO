@@ -1,4 +1,4 @@
-package exercicio2oo;
+package exercicio3oo;
 //GABRIEL E HENRIQUE
 public class Retangulo {
     private int largura, altura;

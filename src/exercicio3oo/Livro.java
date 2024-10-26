@@ -1,39 +1,23 @@
-package exercicio2oo;
+package exercicio3oo;
 //GABRIEL E HENRIQUE
-public class Livro {
+
+
+
+import java.util.Scanner;
+
+class Livro {
     private String titulo;
     private String autor;
     private int anoPublicacao;
-    private boolean disponivel;
+    private boolean emprestado;
 
-    public Livro(String
-
-                         titulo, String autor, int anoPublicacao) {
+    public Livro(String titulo, String autor, int anoPublicacao) {
         this.titulo = titulo;
         this.autor = autor;
         this.anoPublicacao = anoPublicacao;
-        this.disponivel = true;  // O livro começa disponível por padrão
+        this.emprestado = false;
     }
 
-    public void emprestar() {
-        if (disponivel) {
-            disponivel = false;
-            System.out.println("O livro '" + titulo + "' foi emprestado.");
-        } else {
-            System.out.println("O livro '" + titulo + "' já está emprestado.");
-        }
-    }
-
-    public void devolver() {
-        if (!disponivel) {
-            disponivel = true;
-            System.out.println("O livro '" + titulo + "' foi devolvido.");
-        } else {
-            System.out.println("O livro '" + titulo + "' já está disponível.");
-        }
-    }
-
-    // Getters e Setters
     public String getTitulo() {
         return titulo;
     }
@@ -58,11 +42,41 @@ public class Livro {
         this.anoPublicacao = anoPublicacao;
     }
 
-    public boolean isDisponivel() {
-        return disponivel;
+    public boolean isEmprestado() {
+        return emprestado;
     }
 
-    public void setDisponivel(boolean disponivel) {
-        this.disponivel = disponivel;
+    public void setEmprestado(boolean emprestado) {
+        this.emprestado = emprestado;
+    }
+
+    public boolean isDisponivel() {
+        return !isEmprestado();
+    }
+
+    public void emprestar() {
+        if (isDisponivel()) {
+            setEmprestado(true);
+            System.out.println("O livro '" + getTitulo() + "' foi emprestado com sucesso.");
+        } else {
+            System.out.println("O livro '" + getTitulo() + "' já está emprestado.");
+        }
+    }
+
+    public void devolver() {
+        if (!isDisponivel()) {
+            setEmprestado(false);
+            System.out.println("O livro '" + getTitulo() + "' foi devolvido com sucesso.");
+        } else {
+            System.out.println("O livro '" + getTitulo() + "' já está disponível e não precisa ser devolvido.");
+        }
+    }
+
+    public void verificarDisponibilidade() {
+        if (isDisponivel()) {
+            System.out.println("O livro '" + getTitulo() + "' está disponível para empréstimo.");
+        } else {
+            System.out.println("O livro '" + getTitulo() + "' está atualmente emprestado.");
+        }
     }
 }

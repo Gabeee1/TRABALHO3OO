@@ -1,17 +1,46 @@
-package exercicio2oo;
+package exercicio3oo;
 
 
+import exercicio2oo.Livro;
 
-public class testaLivro {
+
+import java.util.Scanner;
+
+public class TestaLivro {
     public static void main(String[] args) {
         Livro livro = new Livro("O Senhor dos Anéis", "J.R.R. Tolkien", 1954);
+        Scanner scanner = new Scanner(System.in);
+        int opcao;
 
-        System.out.println("O livro está disponível? " + livro.isDisponivel());
+        do {
+            System.out.println("\nMenu de Opções:");
+            System.out.println("1. Emprestar livro");
+            System.out.println("2. Devolver livro");
+            System.out.println("3. Verificar disponibilidade");
+            System.out.println("4. Sair");
+            System.out.print("Escolha uma opção: ");
+            opcao = scanner.nextInt();
 
-        livro.emprestar();  // Emprestando o livro
-        System.out.println("O livro está disponível? " + livro.isDisponivel());
+            switch (opcao) {
+                case 1:
+                    livro.emprestar();
+                    break;
+                case 2:
+                    livro.devolver();
+                    break;
+                case 3:
+                    livro.verificarDisponibilidade();
+                    break;
+                case 4:
+                    System.out.println("Saindo do sistema...");
+                    break;
+                default:
+                    System.out.println("Opção inválida. Tente novamente.");
+                    break;
+            }
+        } while (opcao != 4);
 
-        livro.devolver();  // Devolvendo o livro
-        System.out.println("O livro está disponível? " + livro.isDisponivel());
+        scanner.close();
     }
 }
+

@@ -1,11 +1,12 @@
-package exercicio2oo;
+package exercicio3oo;
 
 
+import exercicio3oo.Aluno;
 
 public class testaAluno {
     public static void main(String[] arg) {
 
-        Aluno gabriel = new Aluno();
+        exercicio3oo.Aluno gabriel = new exercicio3oo.Aluno();
         gabriel.setNome("Gabriel");
         gabriel.setN1(8);
         gabriel.setN2(6);
@@ -15,7 +16,7 @@ public class testaAluno {
         System.out.println("Média de " + gabriel.getNome() + " que tem " + gabriel.getIdade() + " anos: " + gabriel.calcularMedia());
         gabriel.imprimirSituacao();
 
-        Aluno guilherme = new Aluno();
+        exercicio3oo.Aluno guilherme = new Aluno();
         guilherme.setNome("Guilherme");
         guilherme.setN1(4);
         guilherme.setN2(5);

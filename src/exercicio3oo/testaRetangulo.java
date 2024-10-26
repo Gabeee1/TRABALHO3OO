@@ -1,10 +1,11 @@
-package exercicio2oo;
+package exercicio3oo;
 
 
+import exercicio3oo.Retangulo;
 
 public class testaRetangulo {
     public static void main(String[] args) {
-        Retangulo retangulo = new Retangulo();
+        exercicio3oo.Retangulo retangulo = new Retangulo();
         retangulo.setLargura(5);
         retangulo.setAltura(10);
 

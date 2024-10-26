@@ -1,8 +1,10 @@
-package exercicio2oo;
+package exercicio3oo;
 
- class testaContaBancaria {
+
+
+class testaContaBancaria {
     public static void main(String[] args) {
-        ContaBancaria conta = new ContaBancaria("123456", 1000.0);
+        exercicio3oo.ContaBancaria conta = new ContaBancaria("123456", 1000.0);
 
         System.out.println("Saldo inicial: R$" + conta.consultarSaldo());
 

@@ -1,9 +1,10 @@
-package exercicio2oo;
+package exercicio3oo;
+
 
 
 public class testaCirculo {
     public static void main(String[] args) {
-        Circulo circulo = new Circulo(4.0);
+        exercicio3oo.Circulo circulo = new Circulo(4.0);
 
         System.out.println("Raio do círculo: " + circulo.getRaio());
         System.out.println("Diâmetro do círculo: " + circulo.calcularDiametro());
